@@ -10,7 +10,7 @@
 
 // Function 
 function classDept(student){
-  console.log(student)
+  console.log(student);
 }
 
-classDept(['cse','it','aiml'])
+classDept(['cse','it','aiml']);
