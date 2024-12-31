@@ -1,13 +1,13 @@
-import React from 'react'
-import Egg from './Egg'
+import React from "react";
+import Egg from "./Egg";
 
 const Hen = () => {
   return (
     <div>
       <h1>Hen</h1>
-      <Egg need="waterszz"/>
+      <Egg />
     </div>
-  )
-}
+  );
+};
 
-export default Hen
+export default Hen;

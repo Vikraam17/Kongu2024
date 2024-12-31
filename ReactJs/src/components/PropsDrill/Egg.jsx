@@ -1,14 +1,12 @@
-import React from 'react'
-import HalfBoil from './halfBoil'
+import React from "react";
+import HalfBoil from "./halfBoil";
 
-
-const Egg = ({need}) => {
+const Egg = () => {
   return (
     <div>
       <h1>Egg</h1>
-      <HalfBoil need={need}/>      
+      <HalfBoil />
     </div>
-  )
-}
-
-export default Egg
+  );
+};
+export default Egg;

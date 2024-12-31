@@ -1,13 +1,13 @@
-import React from 'react'
-import Stomach from './Stomach'
+import React from "react";
+import Stomach from "./Stomach";
 
-const HalfBoil = ({need}) => {
+const HalfBoil = () => {
   return (
     <div>
-      <h1>Halfboil</h1>
-      <Stomach need={need}/>
+      <h1>HalfBoil</h1>
+      <Stomach />
     </div>
-  )
-}
+  );
+};
 
-export default HalfBoil
+export default HalfBoil;

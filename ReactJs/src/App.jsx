@@ -1,38 +1,26 @@
-import Home from "./components/Home";
-import AboutUs from "./components/AboutUs";
-import ContactUs from "./components/ContactUs";
-import { Routes, Route, BrowserRouter as Router, Link } from "react-router-dom";
-import StateHook from "./components/StateHook";
+import React, { createContext } from 'react'
 import Hen from './components/PropsDrill/Hen'
-
-function App() {
+import Project from './components/Project/Project'
+export let nameContext = createContext();
+const App = () => {
   return (
-    <Hen/>
-    // <StateHook/>
-    // <Router>
-    //   <div>
-    //     <nav>
-    //       <ol>
-    //         <li>
-    //           <Link to="/">Home</Link>
-    //         </li>
-    //         <li>
-    //           <Link to="/AboutUs">About Us</Link>
-    //         </li>
-    //         <li>
-    //           <Link to="/ContactUs">Contact Us</Link>
-    //         </li>
-    //       </ol>
-    //     </nav>
-    //   </div>
-
-    //   <Routes>
-    //     <Route path="/" element={<Home />} />
-    //     <Route path="/AboutUs" element={<AboutUs />} />
-    //     <Route path="/ContactUs" element={<ContactUs />} />
-    //   </Routes>
-    // </Router>
-  );
+    <nameContext.Provider value="Vikraam">
+      {/* <Project /> */}
+      <Hen/>
+    </nameContext.Provider>
+  )
 }
 
-export default App;
+export default App
+
+
+
+// import React from 'react'
+// import Project from './components/Project/Project'
+// const App = () => {
+//   return (
+//       <Project />
+//   )
+// }
+
+// export default App
