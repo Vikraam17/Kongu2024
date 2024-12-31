@@ -16,14 +16,6 @@ const StateHook = () => {
     countRef.current--;
     console.log("Ref : ",countRef.current);
   }
-  let TextChange =()=>{
-    
-  }
-  // useEffect(() => {
-  //   console.log("useEffect Invoked");
-  //   return console.log("Value updated");
-  // },[count]);
-
   return (
     <div>
       <h1>Count : {countRef.current}</h1>
