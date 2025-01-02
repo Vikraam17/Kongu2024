@@ -16,7 +16,7 @@ function Stomach() {
       </h1>
       <input
         type="text"
-        onChange={(t) => setColor(t.target.value)}
+        onChange={(e) => setColor(e.target.value)}
         placeholder="Enter the color"
         style={{
           padding: "10px",

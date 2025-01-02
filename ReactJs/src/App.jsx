@@ -1,12 +1,14 @@
 import React, { createContext } from 'react'
 import Hen from './components/PropsDrill/Hen'
 import Project from './components/Project/Project'
+import Memo from './components/Memo';
 export let nameContext = createContext();
 const App = () => {
   return (
     <nameContext.Provider value="Vikraam">
       {/* <Project /> */}
-      <Hen/>
+      {/* <Hen/> */}
+      <Memo />
     </nameContext.Provider>
   )
 }
