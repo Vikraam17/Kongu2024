@@ -34,7 +34,7 @@ const Memo = () => {
         Toggle Theme
       </button>
 
-      <h1 style={themeStyles}>{doubleNumber}</h1>
+      <h1 onMouseOver={() => setTheme((theme) => !theme)} style={themeStyles}>{doubleNumber}</h1>
     </div>
   );
 };
