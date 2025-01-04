@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import "./Memo.css";
+// import "./Memo.css";
 
 const SlowFunction = (number) => {
   let result = number;
