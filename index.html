@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Welcome to Kongu</h1>
-  <div>
-    <div class="one box"></div>
-    <div class="two box"></div>
-    <div class="three box"></div>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Welcome to Kongu</h1>
+    <div>
+      <div class="one box"></div>
+      <div class="two box"></div>
+      <div class="three box"></div>
+    </div>
+    <h1 id="name">I am Vikraam</h1>
+    <button onclick="buttonPressed()">Submit</button>
+    <script>
+      function buttonPressed() {
+        document.getElementById("name").innerHTML = "I am dheepa";
+      }
+    </script>
+  </body>
 </html>

@@ -8,6 +8,11 @@ import Contact from "./components/Project/ContactUs";
 import Memo from "./components/Memo";
 import SignupForm from "./components/Authorization/SignUp";
 import LoginForm from "./components/Authorization/Login";
+import Footer from "./components/Footer";
+import StateHook from "./components/StateHook";
+import Effect from "./components/Effect";
+import Context from "./components/PropsDrill/Hen";
+import Ref from "./components/Project/Ref";
 
 export const nameContext = createContext();
 
@@ -23,6 +28,10 @@ const App = () => {
         <Route path="/memo" element={<Memo />} />
         <Route path="/signup" element={<SignupForm />} />
         <Route path="/login" element={<LoginForm />} />
+        <Route path="/state" element={<StateHook />} />
+        <Route path="/context" element={<Context />} />
+        <Route path="/ref" element={<Ref />} />
+        <Route path="/effect" element={<Effect />} />
       </Routes>
     </BrowserRouter>
   );

@@ -4,13 +4,14 @@ import { useNavigate } from "react-router-dom";
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
-    confirmPassword: "",
   });
 
   const nav = useNavigate();
-  
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -18,16 +19,23 @@ const SignupForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match");
-      return;
-    }
+
     try {
-      const response = await axios.post("http://localhost:3001/signup", formData);
-      console.log(response.data); // Log the response data
-      nav("/login");
+      const response = await axios.post("http://localhost:3001/signup", {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        password: formData.password,
+      });
+
+      console.log(response.data); // Log the response
+      if (response.status === 201) {
+        alert("Signup successful! Redirecting to login...");
+        nav("/login");
+      }
     } catch (error) {
       console.error("There was an error signing up:", error);
+      alert("Signup failed. Please try again.");
     }
   };
 
@@ -35,6 +43,28 @@ const SignupForm = () => {
     <div className="auth-form-container">
       <h2>Signup</h2>
       <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="firstName">First Name:</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            value={formData.firstName}
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="lastName">Last Name:</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            value={formData.lastName}
+            onChange={handleInputChange}
+            required
+          />
+        </div>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input
@@ -53,17 +83,6 @@ const SignupForm = () => {
             id="password"
             name="password"
             value={formData.password}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="confirmPassword">Confirm Password:</label>
-          <input
-            type="password"
-            id="confirmPassword"
-            name="confirmPassword"
-            value={formData.confirmPassword}
             onChange={handleInputChange}
             required
           />

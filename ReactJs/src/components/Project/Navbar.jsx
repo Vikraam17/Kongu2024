@@ -8,19 +8,55 @@ const Navbar = () => {
       <nav>
         <ul className="navbar">
           <li>
-            <Link className="link" to="/">Home</Link>
+            <Link className="link" to="/">
+              Home
+            </Link>
           </li>
           <li>
-            <Link className="link" to="/about">About</Link>
+            <Link className="link" to="/about">
+              About
+            </Link>
+          </li>
+
+          <li>
+            <Link className="link" to="/contact">
+              Contact
+            </Link>
           </li>
           <li>
-            <Link className="link" to="/gallery">Gallery</Link>
+            <Link className="link" to="/state">
+              useState
+            </Link>
           </li>
           <li>
-            <Link className="link" to="/contact">Contact</Link>
+            <Link className="link" to="/effect">
+              useEffect
+            </Link>
           </li>
           <li>
-            <Link className="link" to="/memo">useMemo</Link>
+            <Link className="link" to="/context">
+              useContext
+            </Link>
+          </li>
+          <li>
+            <Link className="link" to="/ref">
+              useRef
+            </Link>
+          </li>
+          <li>
+            <Link className="link" to="/memo">
+              useMemo
+            </Link>
+          </li>
+          <li>
+            <Link className="link" to="/signup">
+              Sign Up
+            </Link>
+          </li>
+          <li>
+            <Link className="link" to="/login">
+              Log In
+            </Link>
           </li>
         </ul>
       </nav>
