@@ -1,0 +1,16 @@
+.container{
+  background-color: rgb(131, 96, 27);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  height: 100vh;
+}
+
+label {
+  display: inline-block;
+}
+input{
+  padding: 10px;
+}
