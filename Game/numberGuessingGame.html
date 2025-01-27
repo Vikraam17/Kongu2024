@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Number Guessing Game</h1>
+  <p>Guess a number between 1 and 100!</p>
+  <input type="number" id="userGuess" placeholder="Enter your guess" />
+  <button onclick="checkGuess()">Submit Guess</button>
+  <div id="message"></div>
+
+  <script>
+    const computerNumber = Math.floor(Math.random() * 100) + 1;
+    console.log("Secret number (for debugging):", computerNumber);
+
+    function checkGuess() {
+      const userGuess = Number(document.getElementById("userGuess").value);
+      const message = document.getElementById("message");
+
+      if (!userGuess || userGuess < 1 || userGuess > 100) {
+        message.textContent = "Please enter a valid number between 1 and 100.";
+        message.style.color = "red";
+        return;
+      }
+
+      if (userGuess === computerNumber) {
+        message.textContent = "🎉 Congratulations! You guessed the correct number!";
+        message.style.color = "green";
+      } else if (userGuess < computerNumber) {
+        message.textContent = "Too low! Try again.";
+        message.style.color = "blue";
+      } else {
+        message.textContent = "Too high! Try again.";
+        message.style.color = "blue";
+      }
+    }
+  </script>
+</body>
+</html>
