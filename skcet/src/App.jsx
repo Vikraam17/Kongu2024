@@ -1,12 +1,18 @@
-import React,{useState} from "react";
+import React from 'react'
+import UseState from './components/Hooks/UseState'
+import UseRef1 from './components/Hooks/UseRef1'
+import UseRef from './components/Hooks/UseRef'
+import UseMemo from './components/Hooks/UseMemo'
 
 const App = () => {
-
   return (
-    <>
-      <h1>Hello world</h1>
-    </>
-  );
-};
+    <div>
+      {/* <UseState/>
+      <UseRef1/>
+      <UseRef/> */}
+      <UseMemo/>
+    </div>
+  )
+}
 
-export default App;
+export default App

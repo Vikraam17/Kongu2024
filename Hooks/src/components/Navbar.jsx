@@ -24,7 +24,7 @@ const Navbar = () => {
           </li>
           <li className="link">
             <a href="/useCallback">useCallBack</a>
-          </li>
+          </li> 
           <li className="link">
             <a href="/useReduce">useReduce</a>
           </li>
